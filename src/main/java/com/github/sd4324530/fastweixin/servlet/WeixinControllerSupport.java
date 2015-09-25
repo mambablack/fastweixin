@@ -44,7 +44,7 @@ public abstract class WeixinControllerSupport extends WeixinSupport {
      * @throws ServletException 异常
      * @throws IOException      IO异常
      */
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST,produces = "plain/text; charset=UTF-8")
     @ResponseBody
     protected final String process(HttpServletRequest request) throws ServletException, IOException {
         if (!isLegal(request)) {
